@@ -1,2 +1,0 @@
-# warriorwebmzl.github.io
-Web

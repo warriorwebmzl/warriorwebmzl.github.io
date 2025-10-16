@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Sapien × Salchiwarrior</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --rojo: #a90f0f;
+  --rojo-claro: #ff4444;
+  --dorado: #f5c518;
+  --negro: #0a0a0a;
+  --blanco: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  background: var(--negro);
+  color: var(--blanco);
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* === SECCIÓN HERO === */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: url('https://images.unsplash.com/photo-1526483360412-f4dbaf036963?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+/* Efecto de vidrio sangriento */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(10,10,10,0.55);
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(169,15,15,0.3), transparent 60%),
+              radial-gradient(circle at 70% 20%, rgba(245,197,24,0.2), transparent 65%);
+  mix-blend-mode: overlay;
+  animation: bloodPulse 8s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+@keyframes bloodPulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.05); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 850px;
+  padding: 0 1.5rem;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-family: 'Cinzel Decorative', serif;
+  color: var(--dorado);
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(245,197,24,0.6),
+               0 0 60px rgba(169,15,15,0.4);
+  animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { text-shadow: 0 0 15px rgba(245,197,24,0.5); }
+  100% { text-shadow: 0 0 35px rgba(255,0,0,0.6); }
+}
+
+.hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #ddd;
+  margin-top: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  font-weight: 400;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  animation: textFade 3s ease forwards 1s;
+}
+
+@keyframes textFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === GOTAS DE SANGRE (PARTÍCULAS) === */
+.blood-drop {
+  position: absolute;
+  background: var(--rojo);
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: 2;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px) scale(0.8); opacity: 0.5; }
+  100% { transform: translateY(110vh) scale(1); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 0.9rem; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Autorización Oficial Validada</h1>
+    <p>
+     Tras los resultados alcanzados con Salchipotato, Red Sapien busca ahora llevar esa misma metodología de éxito y crecimiento digital a Salchiwarrior, impulsando su presencia y rendimiento con estrategias comprobadas.
+      la <span style="color:#ff4444;font-weight:bold;">metodología de éxito</span> en <strong>Salchiwarrior</strong>.
+    </p>
+  </div>
+</section>
+
+<script>
+// === Generador de gotas de sangre animadas ===
+const hero = document.querySelector('.hero');
+
+for (let i = 0; i < 20; i++) {
+  const drop = document.createElement('div');
+  drop.classList.add('blood-drop');
+  const size = Math.random() * 8 + 3;
+  drop.style.width = `${size}px`;
+  drop.style.height = `${size}px`;
+  drop.style.left = `${Math.random() * 100}%`;
+  drop.style.animationDuration = `${Math.random() * 6 + 6}s`;
+  hero.appendChild(drop);
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien × Salchiwarrior - Resultados Titanes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --rojo: #b21f1f;
+      --amarillo: #f5c518;
+      --negro: #0b0a09;
+      --claro: #f2f2f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--negro);
+      color: var(--claro);
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN TITANES === */
+    .titans-section {
+      position: relative;
+      padding: 6rem 2rem;
+      text-align: center;
+      background: linear-gradient(rgba(15,10,9,0.85), rgba(0,0,0,0.95)),
+        url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    .titans-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(rgba(178,31,31,0.25), transparent 70%);
+      z-index: 0;
+    }
+
+    .titans-header {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      text-shadow: 0 0 20px rgba(178,31,31,0.7);
+    }
+
+    .titans-header h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--amarillo);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .titans-header p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: #e8ddbb;
+      line-height: 1.6;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    /* === TARJETAS === */
+    .titan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .titan-card {
+      background: rgba(15,10,9,0.9);
+      border: 1px solid rgba(245,197,24,0.25);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 0 25px rgba(178,31,31,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      max-width: 320px;
+    }
+
+    .titan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 35px rgba(245,197,24,0.5), 0 0 60px rgba(178,31,31,0.6);
+    }
+
+    .titan-icon {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.2rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,197,24,0.9), rgba(178,31,31,0.8));
+      box-shadow: 0 0 25px rgba(245,197,24,0.4);
+    }
+
+    .titan-icon img {
+      width: 38px;
+      height: 38px;
+      filter: brightness(1.2);
+    }
+
+    .titan-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--amarillo);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px rgba(245,197,24,0.7);
+    }
+
+    .titan-card p {
+      font-size: 0.95rem;
+      color: #e8ddbb;
+      line-height: 1.5;
+    }
+
+    /* === EFECTO SANGRE === */
+    .blood-effect {
+      position: absolute;
+      bottom: -10%;
+      left: 50%;
+      width: 200%;
+      height: 130%;
+      transform: translateX(-50%) rotate(-8deg);
+      background: radial-gradient(ellipse at center, rgba(178,31,31,0.2), transparent 80%);
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    @media (max-width: 600px) {
+      .titan-card {
+        padding: 1.5rem 1rem;
+      }
+      .titan-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .titan-card h3 {
+        font-size: 1rem;
+      }
+      .titan-card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien - Protección de Marca</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --negro: #0b0b0b;
+      --gris: #1a1a1a;
+      --dorado: #f5c518;
+      --rojo: #b21f1f;
+      --texto: #f8f8f8;
+    }
+
+    body {
+      background-color: var(--negro);
+      color: var(--texto);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN PROTEGER MARCA === */
+    .brand-section {
+      background: linear-gradient(180deg, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(245,197,24,0.1), transparent 60%),
+                  radial-gradient(circle at bottom, rgba(178,31,31,0.08), transparent 70%);
+      mix-blend-mode: overlay;
+      z-index: 0;
+    }
+
+    .brand-header {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: 0 auto 3rem;
+    }
+
+    .brand-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      color: var(--dorado);
+      text-transform: uppercase;
+      text-shadow: 0 0 25px rgba(245,197,24,0.8);
+      margin-bottom: 1rem;
+    }
+
+    .brand-header p {
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* === CONTENEDOR IMÁGENES === */
+    .brand-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-img {
+      width: 45%;
+      max-width: 500px;
+      min-width: 280px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(245,197,24,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid rgba(245,197,24,0.3);
+    }
+
+    .brand-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 45px rgba(178,31,31,0.3);
+    }
+
+    .brand-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.95);
+      transition: filter 0.4s ease;
+    }
+
+    .brand-img img:hover {
+      filter: brightness(1.1);
+    }
+
+    /* === CTA === */
+    .brand-cta {
+      margin-top: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-cta p {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, var(--dorado), var(--rojo));
+      color: #000;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 25px rgba(245,197,24,0.3);
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(245,197,24,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .brand-gallery {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .brand-img {
+        width: 90%;
+      }
+      .brand-header p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="brand-section">
+    <div class="brand-header">
+      <h2>Proteger tu marca</h2>
+      <p>
+        En Red Sapien entendemos que la identidad digital empieza por tu dominio.  
+        Asistimos a empresas en la adquisición y resguardo de dominios clave,  
+        evitando que terceros los adquieran y los revendan a precios elevados.  
+        <strong>Actuar rápido es proteger tu marca.</strong>
+      </p>
+    </div>
+
+    <div class="brand-gallery">
+      <!-- Espacios para tus imágenes -->
+      <div class="brand-img">
+        <img src="img/D-Warr.png" alt="Gestión de dominios">
+      </div>
+      <div class="brand-img">
+        <img src="img/Dwarrico.png" alt="Seguridad de marca">
+      </div>
+    </div>
+
+    <div class="brand-cta">
+      <p>Tu nombre digital puede costarte miles si esperas demasiado.</p>
+      <button class="cta-button">Asegura tu dominio ahora</button>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+  <section class="titans-section">
+    <div class="titans-header">
+      <h2>Somos Titanes de las Conversiones</h2>
+      <p>Más de <strong>2.500 conversiones</strong> con un <strong>CPC de 874 COP</strong>.  
+      Un ROI de <strong>x16</strong>, campañas de reservas efectivas y un SEO que domina en Manizales.</p>
+    </div>
+
+    <div class="titan-grid">
+
+      <!-- Facebook Ads -->
+      <div class="titan-card">
+        <div class="titan-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook Logo">
+        </div>
+        <h3>Fuerza Social</h3>
+        <p>Convertimos audiencias en compradores con precisión milimétrica y segmentación avanzada.</p>
+      </div>
+
+      <!-- Google Ads -->
+      <div class="titan-card">
+        <div class="titan-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+        </div>
+        <h3>Dominio Orgánico</h3>
+        <p>SEO + Google Ads que garantizan reservas reales y presencia total en la primera página.</p>
+      </div>
+
+      <!-- TikTok -->
+      <div class="titan-card">
+        <div class="titan-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg" alt="TikTok Logo">
+        </div>
+        <h3>Impacto Viral</h3>
+        <p>Videos irresistibles que multiplican alcance y generan comunidad con estilo y autenticidad.</p>
+      </div>
+
+    </div>
+    <div class="blood-effect"></div>
+  </section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien × Salchiwarrior - Automatización</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --rojo: #b21f1f;
+      --amarillo: #f5c518;
+      --gris-fondo: #f8f8f8;
+      --texto: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--texto);
+      background-color: var(--gris-fondo);
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN AUTOMATIZACIÓN === */
+    .automation {
+      position: relative;
+      padding: 6rem 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,250,1) 100%);
+      overflow: hidden;
+    }
+
+    /* Fondo tipo sangre en venas */
+    .automation::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top left, rgba(178,31,31,0.12), transparent 60%),
+                  radial-gradient(ellipse at bottom right, rgba(178,31,31,0.18), transparent 70%),
+                  url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+
+    .automation-header {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: 0 auto 3rem;
+    }
+
+    .automation-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--rojo);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+    }
+
+    .automation-header p {
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* === TARJETAS === */
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .auto-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      border: 1px solid rgba(178,31,31,0.2);
+      box-shadow: 0 0 20px rgba(178,31,31,0.15);
+      transition: all 0.3s ease;
+      max-width: 330px;
+      text-align: center;
+      position: relative;
+    }
+
+    .auto-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(245,197,24,0.35), 0 0 40px rgba(178,31,31,0.3);
+    }
+
+    .auto-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      background: radial-gradient(circle, rgba(245,197,24,0.85), rgba(178,31,31,0.7));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(178,31,31,0.3);
+    }
+
+    .auto-icon span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0,0,0,0.6);
+    }
+
+    .auto-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--rojo);
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .auto-card p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 600px) {
+      .auto-card {
+        padding: 1.5rem 1rem;
+      }
+      .auto-card h3 {
+        font-size: 1rem;
+      }
+      .auto-card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="automation">
+    <div class="automation-header">
+      <h2>Automatizamos el ritmo perfecto</h2>
+      <p>Con social media y herramientas de IA, logramos mantener la frecuencia ideal en las horas más efectivas.  
+         Publicar nunca fue tan preciso ni tan humano.</p>
+    </div>
+
+    <div class="auto-grid">
+
+      <!-- Tarjeta 1 -->
+      <div class="auto-card">
+        <div class="auto-icon"><span>+62%</span></div>
+        <h3>Más Engagement</h3>
+        <p>Con publicaciones automatizadas en picos de audiencia, aumentamos la interacción real entre seguidores.</p>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="auto-card">
+        <div class="auto-icon"><span>+48%</span></div>
+        <h3>Mayor Visibilidad</h3>
+        <p>Algoritmos que detectan el mejor momento para brillar. Más alcance, más vistas, más presencia.</p>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="auto-card">
+        <div class="auto-icon"><span>24/7</span></div>
+        <h3>Sin pausas</h3>
+        <p>La automatización garantiza que la frecuencia no se interrumpa, incluso en horarios nocturnos.</p>
+      </div>
+
+    </div>
+  </section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien × Salchiwarrior - Escudo de Conversión</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --rojo: #b21f1f;
+      --dorado: #f5c518;
+      --negro: #0b0a09;
+      --gris-metal: #1e1e1e;
+      --texto: #f8f8f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--negro);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    /* ===== SECCIÓN ESCUDO ===== */
+    .shield-section {
+      position: relative;
+      padding: 7rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(178,31,31,0.2) 0%, rgba(10,10,10,1) 80%);
+      overflow: hidden;
+    }
+
+    .shield-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      mix-blend-mode: overlay;
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    .shield {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,197,24,0.3) 0%, rgba(178,31,31,0.5) 100%);
+      border: 5px solid rgba(245,197,24,0.7);
+      margin: 0 auto 2rem;
+      box-shadow: 0 0 40px rgba(178,31,31,0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Lanzas cruzadas */
+    .spear {
+      position: absolute;
+      width: 200px;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(245,197,24,1), rgba(178,31,31,0.9));
+      border-radius: 3px;
+      top: 50%;
+      transform-origin: center;
+      opacity: 0.8;
+    }
+    .spear.left {
+      left: calc(50% - 250px);
+      transform: rotate(-35deg);
+    }
+    .spear.right {
+      right: calc(50% - 250px);
+      transform: rotate(35deg);
+    }
+
+    .shield-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--dorado);
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(245,197,24,0.7), 0 0 35px rgba(178,31,31,0.6);
+      position: relative;
+      z-index: 3;
+      margin-bottom: 1rem;
+    }
+
+    .shield-subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #ddd;
+      max-width: 750px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 3;
+    }
+
+    /* === TARJETAS === */
+    .shield-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      z-index: 3;
+      position: relative;
+    }
+
+    .shield-card {
+      background: rgba(30,30,30,0.9);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      border: 1px solid rgba(245,197,24,0.4);
+      box-shadow: 0 0 20px rgba(178,31,31,0.25);
+      transition: all 0.4s ease;
+      transform: scale(0.95);
+      opacity: 0;
+      animation: warriorIn 1.4s forwards;
+    }
+
+    .shield-card:nth-child(1) { animation-delay: 0.3s; }
+    .shield-card:nth-child(2) { animation-delay: 0.6s; }
+    .shield-card:nth-child(3) { animation-delay: 0.9s; }
+
+    @keyframes warriorIn {
+      from { opacity: 0; transform: translateY(60px) scale(0.9); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .shield-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--dorado);
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .shield-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    /* === TABLERO DE RESULTADOS === */
+    .results-board {
+      margin-top: 3.5rem;
+      background: rgba(245,197,24,0.05);
+      border: 1px solid rgba(245,197,24,0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 25px rgba(178,31,31,0.25);
+    }
+
+    .results-board h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--dorado);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .metric {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--rojo);
+      text-shadow: 0 0 15px rgba(178,31,31,0.7);
+    }
+
+    .metric-sub {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .shield { width: 160px; height: 160px; }
+      .spear.left, .spear.right { display: none; }
+      .shield-subtitle { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="shield-section">
+    <div class="spear left"></div>
+    <div class="spear right"></div>
+    <div class="shield"></div>
+
+    <h2 class="shield-title">El Escudo de Conversión</h2>
+    <p class="shield-subtitle">
+      No hacemos portales genéricos. Forjamos sitios a la medida, optimizados para vender,  
+      proteger tu marca y conquistar el mercado digital.
+    </p>
+
+    <div class="shield-grid">
+      <div class="shield-card">
+        <h3>+68% Retención</h3>
+        <p>Diseños que mantienen al usuario navegando más tiempo, mejorando la conversión orgánica.</p>
+      </div>
+
+      <div class="shield-card">
+        <h3>+52% ROI Web</h3>
+        <p>Portales optimizados .com y .co con cierre promedio del 42% del tráfico direccionado.</p>
+      </div>
+
+      <div class="shield-card">
+        <h3>Velocidad x3</h3>
+        <p>Arquitectura técnica más rápida y ligera, mejor posicionamiento SEO y experiencia brutal.</p>
+      </div>
+    </div>
+
+    <div class="results-board">
+      <h4>Rendimiento comprobado</h4>
+      <div class="metric">42%</div>
+      <div class="metric-sub">Tasa de cierre sobre tráfico orgánico dirigido al dominio principal</div>
+    </div>
+  </section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien × Salchiwarrior - Red de Automatización IA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --rojo: #b21f1f;
+      --rojo-luz: #ff3b3b;
+      --amarillo: #f5c518;
+      --negro: #0b0a09;
+      --gris: #1b1b1b;
+      --texto: #f8f8f8;
+      --azul-neon: #00b7ff;
+    }
+
+    body {
+      background: var(--negro);
+      color: var(--texto);
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN AUTOMATIZACIÓN RED === */
+    .network-section {
+      position: relative;
+      padding: 8rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(255,0,0,0.15) 0%, rgba(5,5,5,1) 90%);
+      overflow: hidden;
+    }
+
+    /* Líneas animadas estilo n8n */
+    .network-bg {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 0.05) 0 2px,
+        transparent 2px 80px
+      ),
+      radial-gradient(circle at center, rgba(255,0,0,0.15), transparent 80%);
+      animation: flowLines 10s linear infinite;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    @keyframes flowLines {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 300px 600px, 200px 400px; }
+    }
+
+    .network-header {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .network-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      color: var(--amarillo);
+      text-transform: uppercase;
+      text-shadow: 0 0 25px rgba(245,197,24,0.8), 0 0 50px rgba(255,0,0,0.5);
+      margin-bottom: 1rem;
+    }
+
+    .network-header p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: #ccc;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* === NODOS === */
+    .node-network {
+      position: relative;
+      width: 100%;
+      max-width: 950px;
+      height: 500px;
+      margin: 3rem auto;
+    }
+
+    .connection-line {
+      position: absolute;
+      background: linear-gradient(90deg, var(--rojo-luz), transparent);
+      height: 2px;
+      width: 180px;
+      animation: pulse 2s infinite alternate;
+      filter: blur(1px);
+    }
+
+    .node {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(80,0,0,0.9));
+      border: 2px solid rgba(245,197,24,0.6);
+      box-shadow: 0 0 25px rgba(255,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 0.5rem;
+      z-index: 2;
+      animation: nodeGlow 3s ease-in-out infinite alternate;
+    }
+
+    .node:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255,0,0,0.8);
+    }
+
+    @keyframes nodeGlow {
+      0% { box-shadow: 0 0 20px rgba(255,0,0,0.4); }
+      100% { box-shadow: 0 0 50px rgba(255,0,0,0.9); }
+    }
+
+    /* Posiciones de nodos */
+    .node.reviews { top: 10%; left: 10%; }
+    .node.whatsapp { top: 35%; left: 40%; }
+    .node.crm { top: 70%; left: 20%; }
+    .node.meta { top: 20%; right: 15%; }
+    .node.google { bottom: 15%; right: 25%; }
+
+    /* Líneas entre nodos */
+    .line1 { top: 25%; left: 18%; transform: rotate(20deg); width: 260px; }
+    .line2 { top: 50%; left: 30%; transform: rotate(-10deg); width: 320px; }
+    .line3 { top: 60%; left: 22%; transform: rotate(35deg); width: 260px; }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+
+    /* === TARJETAS === */
+    .network-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      margin-top: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .network-card {
+      background: rgba(25, 25, 25, 0.95);
+      border: 1px solid rgba(245,197,24,0.4);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 0 30px rgba(255,0,0,0.25);
+      transition: all 0.4s ease;
+      max-width: 320px;
+    }
+
+    .network-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(255,0,0,0.4);
+    }
+
+    .network-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--amarillo);
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .network-card p {
+      font-size: 0.95rem;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    /* === MÉTRICAS === */
+    .network-stats {
+      margin-top: 4rem;
+      background: rgba(255,0,0,0.07);
+      border: 1px solid rgba(255,0,0,0.3);
+      border-radius: 14px;
+      padding: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      box-shadow: 0 0 35px rgba(255,0,0,0.25);
+    }
+
+    .network-stats h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--amarillo);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .metric-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--rojo-luz);
+      text-shadow: 0 0 20px rgba(255,0,0,0.8);
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .node-network { height: 400px; }
+      .node { width: 80px; height: 80px; font-size: 0.6rem; }
+      .network-header p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="network-section">
+    <div class="network-bg"></div>
+
+    <div class="network-header">
+      <h2>Automatización Viva: IA que Respira</h2>
+      <p>Flujos con agentes inteligentes que ejecutan reseñas, respuestas y ventas  
+         mientras duermes. El sistema se mueve, se adapta y no se detiene.</p>
+    </div>
+
+    <!-- Red visual de nodos -->
+    <div class="node-network">
+      <div class="connection-line line1"></div>
+      <div class="connection-line line2"></div>
+      <div class="connection-line line3"></div>
+
+      <div class="node reviews">Reseñas<br>Auto+</div>
+      <div class="node whatsapp">Bot<br>WhatsApp</div>
+      <div class="node crm">CRM<br>Flujos</div>
+      <div class="node meta">Meta<br>Ads</div>
+      <div class="node google">Google<br>Reseñas</div>
+    </div>
+
+    <!-- Tarjetas -->
+    <div class="network-cards">
+      <div class="network-card">
+        <h3>Reseñas IA</h3>
+        <p>Automatizamos cada reseña positiva con agentes que detectan clientes satisfechos  
+        y publican valor real en Google. +112% credibilidad local.</p>
+      </div>
+
+      <div class="network-card">
+        <h3>Flujos Adaptativos</h3>
+        <p>Agentes que aprenden: ajustan horarios, mensajes y rutas según conversión.  
+        +61% efectividad por cliente.</p>
+      </div>
+
+      <div class="network-card">
+        <h3>Integración Total</h3>
+        <p>CRM, Meta, WhatsApp y Google conectados en una sola red viva.  
+        +37% reducción de tiempos humanos.</p>
+      </div>
+    </div>
+
+    <!-- Métricas -->
+    <div class="network-stats">
+      <h4>Impacto Real del Sistema</h4>
+      <div class="metric-grid">
+        <div class="metric-item">
+          <div class="metric-value">+112%</div>
+          <div class="metric-label">Reseñas automatizadas</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">+61%</div>
+          <div class="metric-label">Optimización de flujos</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">+37%</div>
+          <div class="metric-label">Tareas humanas reducidas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultados Red Sapien × Salchipotato</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --rojo: #b21f1f;
+  --amarillo: #f5c518;
+  --negro: #0a0a0a;
+  --gris: #1a1a1a;
+  --blanco: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--negro);
+  color: var(--blanco);
+  overflow-x: hidden;
+}
+
+/* === SECCIÓN RESULTADOS === */
+.results-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, var(--negro) 0%, var(--gris) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.results-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(178,31,31,0.25), transparent 70%);
+  mix-blend-mode: overlay;
+  animation: pulse 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* === TITULO === */
+.results-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2.5rem;
+}
+
+.results-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  color: var(--amarillo);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 25px rgba(245,197,24,0.8);
+  margin-bottom: 1rem;
+}
+
+.results-header p {
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === IMAGEN PRINCIPAL === */
+.result-image {
+  position: relative;
+  z-index: 2;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 850px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(245,197,24,0.3);
+  box-shadow: 0 0 25px rgba(245,197,24,0.15);
+  transition: transform 0.4s ease;
+}
+
+.result-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 45px rgba(245,197,24,0.25);
+}
+
+.result-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.95);
+}
+
+/* === DATOS DE RESULTADOS === */
+.results-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.stat-card {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(245,197,24,0.3);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  width: 280px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(178,31,31,0.25);
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(245,197,24,0.4);
+}
+
+.stat-title {
+  font-family: 'Cinzel', serif;
+  color: var(--amarillo);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* === TARJETA DORADA FINAL === */
+.final-card {
+  background: var(--amarillo);
+  color: #000;
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  max-width: 480px;
+  margin: 3.5rem auto 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 40px rgba(245,197,24,0.35);
+  position: relative;
+  overflow: hidden;
+  animation: glow 4s infinite alternate ease-in-out;
+}
+
+.final-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 25px rgba(245,197,24,0.3); }
+  100% { box-shadow: 0 0 55px rgba(245,197,24,0.6); }
+}
+
+@media (max-width: 768px) {
+  .results-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-card {
+    width: 85%;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="results-section">
+  <div class="results-header">
+    <h2>Una máquina de rentabilidad</h2>
+    <p>+2,500 Conversiones mensuales con un CPC inferior a 900 COP</p>
+  </div>
+
+  <div class="result-image">
+    <!-- Aquí puedes colocar tu imagen de resultados -->
+    <img src="img/Campaña-sal.png" alt="Resultados Salchipotato">
+  </div>
+
+  <div class="results-stats">
+    <div class="stat-card">
+      <div class="stat-title">Flujo de clientes</div>
+      <div class="stat-value">+69%</div>
+      <p>Salchipotato Chipre</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-title">Flujo de clientes</div>
+      <div class="stat-value">+39%</div>
+      <p>Salchipotato Av. Santander</p>
+    </div>
+  </div>
+
+  <div class="final-card">
+    Aumento rentabilidad conjunta del negocio +54% en 5 meses
+  </div>
+</section>
+
+</body>
+</html>
+
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Sapien × Salchipotato - El Aliado Definitivo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+      --rojo: #b21f1f;
+      --rojo-luz: #ff3b3b;
+      --dorado: #f5c518;
+      --negro: #050505;
+      --texto: #f8f8f8;
+    }
+
+    body {
+      background: var(--negro);
+      color: var(--texto);
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* === SECCIÓN FINAL === */
+    .final-section {
+      position: relative;
+      padding: 8rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(255,0,0,0.1), rgba(5,5,5,1) 85%);
+      overflow: hidden;
+    }
+
+    /* Fondo animado estilo batalla */
+    .final-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        url('https://www.transparenttextures.com/patterns/dark-mosaic.png'),
+        radial-gradient(circle at center, rgba(255,0,0,0.2), transparent 80%);
+      background-blend-mode: overlay;
+      opacity: 0.4;
+      animation: pulseBg 8s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes pulseBg {
+      0% { filter: brightness(1); opacity: 0.35; }
+      100% { filter: brightness(1.3); opacity: 0.55; }
+    }
+
+    .final-header {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto 4rem;
+    }
+
+    .final-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--dorado);
+      text-transform: uppercase;
+      text-shadow: 0 0 30px rgba(245,197,24,0.8), 0 0 50px rgba(255,0,0,0.6);
+      margin-bottom: 1rem;
+    }
+
+    .final-header p {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: #ddd;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* MÉTRICAS */
+    .final-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    .stat-card {
+      background: rgba(25, 25, 25, 0.9);
+      border-radius: 14px;
+      border: 1px solid rgba(245,197,24,0.3);
+      box-shadow: 0 0 25px rgba(255,0,0,0.25);
+      padding: 2rem 1.5rem;
+      max-width: 260px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 45px rgba(255,0,0,0.5);
+    }
+
+    .stat-value {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--rojo-luz);
+      text-shadow: 0 0 25px rgba(255,0,0,0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #ccc;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    /* EFECTO DE ENERGÍA */
+    .energy-lines {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        60deg,
+        rgba(255,0,0,0.05) 0 2px,
+        transparent 2px 80px
+      );
+      animation: energyMove 12s linear infinite;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    @keyframes energyMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 400px 800px; }
+    }
+
+    /* CTA FINAL */
+    .final-cta {
+      margin-top: 5rem;
+      z-index: 3;
+      position: relative;
+    }
+
+    .cta-title {
+      font-family: 'Cinzel', serif;
+      color: var(--dorado);
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 18px rgba(245,197,24,0.6);
+    }
+
+    .cta-text {
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, var(--rojo-luz), var(--dorado));
+      border: none;
+      color: #000;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      box-shadow: 0 0 25px rgba(255,0,0,0.4);
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 45px rgba(255,0,0,0.6);
+    }
+
+    @media (max-width: 600px) {
+      .stat-card { padding: 1.5rem 1rem; }
+      .final-header p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+ 
